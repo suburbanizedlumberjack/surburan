@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Knight's Errant</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                background-color: rgb(80, 109, 80);
+            }
+
+            nav {
+                display: flex;
+                padding: 2% 6%;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                background-color:rgb(141, 176, 141);
+            }
+
+            .nav-links {
+                flex: 1;
+                text-align: right;
+            }
+
+            .nav-links ul li {
+                list-style: none;
+                display: inline-block;
+                padding: 8px 12px;
+                position: relative;
+            }
+
+            .nav-links ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 13px;
+            }
+
+            .nav-links ul li::after {
+                content: '';
+                width: 0%;
+                height: 2px;
+                background:  rgb(27, 90, 27);
+                display: block;
+                margin: auto;
+                transition: 0.5s;
+            }
+
+            .nav-links ul li:hover::after {
+                width: 100%;
+            }
+
+            .site-title {
+                color: #fff;
+                text-decoration: none;
+                font-size: 25px;
+            }
+
+            .text-box {
+                width: 90%;
+                color: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .highlights {
+                width: 100%;
+                margin: auto;
+                text-align: center;
+                padding-top: 20px;
+            }
+
+            h1 {
+                font-size: 25px;
+                font-weight: 600;
+                color: #fff;
+            }
+
+            p {
+                color: #fff;
+                font-size: 14px;
+                font-weight: 200;
+                line-height: 10px;
+                padding: 2px;
+            }
+
+            .row {
+                display: flex;
+                justify-content: space-between;
+                padding: 30px;
+                line-height: 1px;
+            }
+
+            .highlights-col {
+                flex-basis: 31%;
+                background: rgb(141, 176, 141);
+                border-radius: 7px;
+                margin-bottom: 2%;
+                padding: 20px 12px;
+                box-sizing: border-box;
+            }
+
+            h3 {
+                text-align: center;
+                font-weight: 600;
+                margin: 10px 0;
+                color: #fff;
+                padding-bottom: 15px;
+            }
+
+            .highlights-col:hover {
+                box-shadow: 0 0 20px 0px rgba(0,0,0,0.6);
+            }
+
+
+
+        </style>
+</head>
+
+    <body>
+        <section class="header">
+            <nav>
+                <div class="site-title">
+                    <h1>KNIGHT'S ERRANT</h1>
+                </div>
+                <a href="index.html"></a>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="art.html">ART</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+        </section>
+
+        <section class="highlights">
+            <h1>HIGHLIGHTS</h1>
+            <p>some of my recent favorites.</p>
+
+            <div class="row">
+                <div class="highlights-col">
+                    <h3>lilypads</h3>
+                    <img src="img/lilypads.jpg" style="width: 300px">
+                </div>
+               
+                <div class="highlights-col">
+                    <h3>like a fish</h3>
+                    <img src="img/like a fish.jpg" style="width: 300px">
+                </div>
+
+                <div class="highlights-col">
+                    <h3>suzuka 2024</h3>
+                    <img src="img/suzuka 2024.jpg" style="width: 300px">
+                </div>
+                
+            </div>
+
+
+
+
+
+        </section>
+
+
+    </body>
+</html>

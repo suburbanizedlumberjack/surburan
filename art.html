@@ -1,0 +1,511 @@
+<head>
+    <title>Knight's Errant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: rgb(80, 109, 80);
+        }
+
+        nav {
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            background-color:rgb(141, 176, 141);
+        }
+
+        .nav-links {
+            flex: 1;
+            text-align: right;
+        }
+
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+
+        .nav-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background:  rgb(27, 90, 27);
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+        .site-title {
+            color: #fff;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        .row {
+                display: flex;
+                justify-content: space-between;
+                padding: 30px;
+                line-height: 1px;
+                text-align: center;
+            }
+
+            .highlights-col {
+                flex-basis: 31%;
+                background:rgb(141, 176, 141);
+                border-radius: 7px;
+                margin-bottom: 2%;
+                padding: 20px 12px;
+                box-sizing: border-box;
+            }
+
+            h3 {
+                text-align: center;
+                font-weight: 600;
+                margin: 10px 0;
+                color: #fff;
+                padding-bottom: 15px;
+            }
+
+            .highlights-col:hover {
+                box-shadow: 0 0 20px 0px rgba(0,0,0,0.6);
+            }
+
+         h3 {
+                text-align: center;
+                font-weight: 600;
+                margin: 10px 0;
+                color: #fff;
+                padding-bottom: 15px;
+            }
+
+            .images {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                line-height: 1px;
+                text-align: center;
+            }
+
+            .images-col {
+                flex-basis: 31%;
+                background:rgb(141, 176, 141);
+                border-radius: 7px;
+                margin-bottom: 2%;
+                padding: 20px 12px;
+                box-sizing: border-box;
+            }
+
+            h3 {
+                text-align: center;
+                font-weight: 600;
+                margin: 10px 0;
+                color: #fff;
+                padding-bottom: 15px;
+            }
+
+            .images-col:hover {
+                box-shadow: 0 0 20px 0px rgba(0,0,0,0.6);
+            }
+
+            .paintings {
+                display: flex;
+                justify-content: space-between;
+                padding: 30px;
+                line-height: 1px;
+                text-align: center;
+            }
+
+            .paintings-col {
+                flex-basis: 31%;
+                background:rgb(141, 176, 141);
+                border-radius: 7px;
+                margin-bottom: 2%;
+                padding: 20px 12px;
+                box-sizing: border-box;
+            }
+
+            h3 {
+                text-align: center;
+                font-weight: 600;
+                margin: 10px 0;
+                color: #fff;
+                padding-bottom: 15px;
+            }
+
+            .paintings-col:hover {
+                box-shadow: 0 0 20px 0px rgba(0,0,0,0.6);
+            }
+
+            .artwork {
+                display: flex;
+                justify-content: space-between;
+                padding: 30px;
+                line-height: 1px;
+                text-align: center;
+            }
+
+            .artwork-col {
+                flex-basis: 31%;
+                background:rgb(141, 176, 141);
+                border-radius: 7px;
+                margin-bottom: 2%;
+                padding: 20px 12px;
+                box-sizing: border-box;
+            }
+
+            .usf {
+                display: flex;
+                justify-content: space-between;
+                padding: 30px;
+                line-height: 1px;
+                text-align: center;
+            }
+
+            .usf-col {
+                flex-basis: 31%;
+                background:rgb(141, 176, 141);
+                border-radius: 7px;
+                margin-bottom: 2%;
+                padding: 20px 12px;
+                box-sizing: border-box;
+            }
+
+            .usf-col:hover {
+                box-shadow: 0 0 20px 0px rgba(0,0,0,0.6);
+            }
+
+            .usf2 {
+                display: flex;
+                justify-content: space-between;
+                padding: 30px;
+                line-height: 1px;
+                text-align: center;
+            }
+
+            .usf2-col {
+                flex-basis: 31%;
+                background:rgb(141, 176, 141);
+                border-radius: 7px;
+                margin-bottom: 2%;
+                padding: 20px 12px;
+                box-sizing: border-box;
+            }
+
+            .usf2-col:hover {
+                box-shadow: 0 0 20px 0px rgba(0,0,0,0.6);
+            }
+
+            .usf3 {
+                display: flex;
+                justify-content: space-between;
+                padding: 30px;
+                line-height: 1px;
+                text-align: center;
+            }
+
+            .usf3-col {
+                flex-basis: 31%;
+                background:rgb(141, 176, 141);
+                border-radius: 7px;
+                margin-bottom: 2%;
+                padding: 20px 12px;
+                box-sizing: border-box;
+            }
+
+            .usf3-col:hover {
+                box-shadow: 0 0 20px 0px rgba(0,0,0,0.6);
+            }
+
+            .usf4 {
+                display: flex;
+                justify-content: space-between;
+                padding: 30px;
+                line-height: 1px;
+                text-align: center;
+            }
+
+            .usf4-col {
+                flex-basis: 31%;
+                background:rgb(141, 176, 141);
+                border-radius: 7px;
+                margin-bottom: 2%;
+                padding: 20px 12px;
+                box-sizing: border-box;
+            }
+
+            .usf4-col:hover {
+                box-shadow: 0 0 20px 0px rgba(0,0,0,0.6);
+            }
+
+            .usf5 {
+                display: flex;
+                justify-content: space-between;
+                padding: 30px;
+                line-height: 1px;
+                text-align: center;
+            }
+
+            .usf5-col {
+                flex-basis: 31%;
+                background:rgb(141, 176, 141);
+                border-radius: 7px;
+                margin-bottom: 2%;
+                padding: 20px 12px;
+                box-sizing: border-box;
+            }
+
+            .usf5-col:hover {
+                box-shadow: 0 0 20px 0px rgba(0,0,0,0.6);
+            }
+
+            h3 {
+                text-align: center;
+                font-weight: 600;
+                margin: 10px 0;
+                color: #fff;
+                padding-bottom: 15px;
+            }
+
+            .artwork-col:hover {
+                box-shadow: 0 0 20px 0px rgba(0,0,0,0.6);
+            }
+
+            .text-box {
+                width: 90%;
+                color: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .highlights {
+                width: 100%;
+                margin: auto;
+                text-align: center;
+                padding-top: 20px;
+            }
+
+            h1 {
+                font-size: 25px;
+                font-weight: 600;
+                color: #fff;
+            }
+
+
+
+       
+
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <div class="site-title">
+                <h1>ART</h1>
+            </div>
+            <a href="index.html"></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="art.html">ART</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="highlights">
+            <h1>portfolio of art</h1>
+
+            <section class="usf">
+                <div class="usf-col">
+                    <h3>architecture</h3>
+                    <img src="img/architecture.jpg" style="width: 300px">
+                </div>
+
+                <div class="usf-col">
+                    <h3>beta fish</h3>
+                    <img src="img/beta fish.jpg" style="width: 300px">
+                </div>
+
+                <div class="usf-col">
+                    <h3>on the water</h3>
+                    <img src="img/boat.jpg" style="width: 300px">
+                </div>
+            </section>
+
+            <section class="usf2">
+                <div class="usf2-col">
+                    <h3>collage and painting</h3>
+                    <img src="img/collage.jpg" style="width: 300px">
+                </div>
+
+                <div class="usf2-col">
+                    <h3>color chart</h3>
+                    <img src="img/color chart.jpg" style="width: 300px">
+                </div>
+
+                <div class="usf2-col">
+                    <h3>comic</h3>
+                    <img src="img/comic.jpg" style="width: 300px">
+                </div>
+            </section>
+
+            <section class="usf3">
+                <div class="usf3-col">
+                    <h3>gated</h3>
+                    <img src="img/denmark.jpg" style="width: 300px">
+                </div>
+
+                <div class="usf3-col">
+                    <h3>d8 sculpture</h3>
+                    <img src="img/dnd.jpg" style="width: 300px">
+                </div>
+
+                <div class="usf3-col">
+                    <h3></h3>
+                    <img src="img/dragon.jpg" style="width: 300px">
+                </div>
+            </section>
+
+            <section class="usf4">
+                <div class="usf3-col">
+                    <h3>peonie</h3>
+                    <img src="img/flower.jpg" style="width: 300px">
+                </div>
+
+                <div class="usf4-col">
+                    <h3>goldfish 2</h3>
+                    <img src="img/goldfish 2.jpg" style="width: 300px">
+                </div>
+
+                <div class="usf4-col">
+                    <h3>henry the duck</h3>
+                    <img src="img/henry.jpg" style="width: 300px">
+                </div>
+            </section>
+
+            <section class="usf5">
+                <div class="usf5-col">
+                    <h3>joe cool</h3>
+                    <img src="img/joe cool.jpg" style="width: 300px">
+                </div>
+
+                <div class="usf5-col">
+                    <h3>snoopy</h3>
+                    <img src="img/snoopy.jpg" style="width: 300px">
+                </div>
+
+                <div class="usf5-col">
+                    <h3>color experiments</h3>
+                    <img src="img/star trek.jpg" style="width: 300px">
+                </div>
+            </section>
+
+            <div class="row">
+                <div class="highlights-col">
+                    <h3>lilypads</h3>
+                    <img src="img/lilypads.jpg" style="width: 300px">
+                </div>
+               
+                <div class="highlights-col">
+                    <h3>like a fish</h3>
+                    <img src="img/like a fish.jpg" style="width: 300px">
+                </div>
+
+                <div class="highlights-col">
+                    <h3>suzuka 2024</h3>
+                    <img src="img/suzuka 2024.jpg" style="width: 300px">
+                </div>
+                
+            </div>
+
+            <section class="images">
+                <div class="images-col">
+                    <h3>goldfish</h3>
+                    <img src="img/goldfish.jpg" style="width: 300px">
+                </div>
+
+                <div class="images-col">
+                    <h3>cuttlefish</h3>
+                    <img src="img/flamboyant cuttlefish.jpg" style="width: 300px">
+                </div>
+
+                <div class="images-col">
+                    <h3>teapot</h3>
+                    <img src="img/tea.jpg" style="width: 300px">
+                </div>
+            </section>
+
+            <section class="paintings">
+                <div class="paintings-col">
+                    <h3>caesar</h3>
+                    <img src="img/caesar.jpg" style="width: 300px">
+                </div>
+
+                <div class="paintings-col">
+                    <h3>peach tree</h3>
+                    <img src="img/peach tree.jpg" style="width: 300px">
+                </div>
+
+                <div class="paintings-col">
+                    <h3>teacups</h3>
+                    <img src="img/teacup study.jpg" style="width: 300px">
+                </div>
+            </section>
+
+            <section class="artwork">
+                <div class="artwork-col">
+                    <h3>here and there</h3>
+                    <img src="img/here and there.jpg" style="width: 300px">
+                </div>
+
+                <div class="artwork-col">
+                    <h3>tetera</h3>
+                    <img src="img/tetera.jpg" style="width: 300px">
+                </div>
+
+                <div class="artwork-col">
+                    <h3>stained glass</h3>
+                    <img src="img/stained glass.jpg" style="width: 300px">
+                </div>
+            </section>
+
+
+
+
+
+                </div>
+            </section>
+
+        </div>
+        </section>
+
+
+
+    </div>
+    </section>
+    </body>
